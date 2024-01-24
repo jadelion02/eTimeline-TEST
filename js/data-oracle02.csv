@@ -1,4 +1,4 @@
-id,parentId,name,lastName,position,image
+id,parentId,name,lastName,position
 100,,Steven,King,Chief Operating Officer,
 101,100,Neena,Kochhar,Administration Vice President,
 102,100,Lex,De Haan,Administration Vice President,
