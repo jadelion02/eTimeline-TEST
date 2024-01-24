@@ -1,5 +1,4 @@
-id,parentId,name,lastName,position,image,email,phone_number,hire_date,job_id,salary,commission_pct,department_id,job_min_salary,location_state,job_max_salary,department_name,department_location_id,department_location_street_address,department_location_postal_code,department_location_country_id,department_location_country_name,department_location_country_region_id,department_location_country_region_name
-
+id,parentId,name,lastName
 100,,Steven,King,Chief Operating Officer,
 101,100,Neena,Kochhar,Administration Vice President,
 102,100,Lex,De Haan,Administration Vice President,
