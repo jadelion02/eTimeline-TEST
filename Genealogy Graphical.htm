@@ -62,7 +62,8 @@ if (localStorage.getItem('mySelectLocalstorageValue') === null) {
                 localStorage.setItem('mySelectLocalstorageValue', "KJV");
                 document.write("a. KJV"); 
                 
-                let x = localStorage.getItem('mySelectLocalstorageValue');             
+                let x = localStorage.getItem('mySelectLocalstorageValue');
+				alert("1 Alert = " + x);              
                 
             }
             else {
@@ -114,6 +115,7 @@ $(document).ready(function(){
 <script type="text/javascript">
 
 let x = localStorage.getItem('mySelectLocalstorageValue'); 
+alert("2 Alert = " + x); 
 // Default translation if the bible version cannot be detected
 BP.ScriptureTagger.Config.Translation = x;
 // If set true, the translation abbreviation will be hidden
