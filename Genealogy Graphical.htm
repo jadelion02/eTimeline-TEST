@@ -45,11 +45,13 @@ alert(foo);
       <option value="KJV">1. KJV - King James Version</option>
       <option value="NKJV">2. NKJV - New King James Version</option>
       <option value="NIV">3. NIV - New International Version</option>
-      <option value="ASV">4. ASV - American Standard Version</option> 			 
-      <option value="ESV">5. ESV - English Standard Version</option>   
-      <option value="CUNPSS">6. CUNPSS - Chinese Union Version 新标点和合本 (简体)</option>
+	  <option value="ASV">4. ASV - American Standard Version</option> 			 
+	  <option value="ESV">5. ESV - English Standard Version</option> 
+	  
+	  <option value="CUNPSS">6. CUNPSS - Chinese Union Version 新标点和合本 (简体)</option>
       <option value="RCUVSS">7. RCUVSS - Chinese Union Version 和合本修订版 (简体)</option>
-      <option value="CUVS">8. CUVS - Chinese Union Version 和合本 (简体)</option>          	  
+      <option value="CUVS">8. CUVS - Chinese Union Version 和合本 (简体)</option>  
+               	  
       <option value="CUNPTS">9. CUNPTS - Chinese Union Version 新標點和合本 (繁體)</option>
       <option value="RCUVTS">10. RCUVTS - Chinese Union Version 和合本修定版 (繁體)</option>
   </select>
@@ -66,27 +68,35 @@ if (localStorage.getItem('mySelectLocalstorageValue') === null) {
             }
             else {
                 if (localStorage.getItem('mySelectLocalstorageValue') === "KJV") { 
-                    document.write("1. KJV - King James Version"); 
+                    document.write("1. KJV - King James Version");
+                    let x = localStorage.getItem('mySelectLocalstorageValue'); 
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "NKJV") { 
-                    document.write("2. NKJV - New King James Version"); 
+                    document.write("2. NKJV - New King James Version");
+                    let x = localStorage.getItem('mySelectLocalstorageValue');  
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "NIV") { 
-                    document.write("3. NIV - New International Version");                    
+                    document.write("3. NIV - New International Version");
+                    let x = localStorage.getItem('mySelectLocalstorageValue');                     
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "ASV") { 
-                    document.write("4. ASV - American Standard Version"); 
+                    document.write("4. ASV - American Standard Version");
+                    let x = localStorage.getItem('mySelectLocalstorageValue');  
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "ESV") { 
                     document.write("5. ESV - English Standard Version");  
-                    
+                    let x = localStorage.getItem('mySelectLocalstorageValue'); 
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "CUNPSS") { 
-                    document.write("6. CUNPSS - Chinese Union Version 新标点和合本 (简体)"); 
+                    document.write("6. CUNPSS - Chinese Union Version 新标点和合本 (简体)");
+                    let x = localStorage.getItem('mySelectLocalstorageValue');  
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "RCUVSS") { 
-                    document.write("7. RCUVSS - Chinese Union Version 和合本修订版 (简体)");                                         
+                    document.write("7. RCUVSS - Chinese Union Version 和合本修订版 (简体)");
+                    let x = localStorage.getItem('mySelectLocalstorageValue');                                          
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "CUVS") { 
                     document.write("8. CUVS - Chinese Union Version 和合本 (简体)");                                    
-                                                         
+                    let x = localStorage.getItem('mySelectLocalstorageValue');                                      
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "CUNPTS") { 
-                    document.write("9. CUNPTS - Chinese Union Version 新標點和合本 (繁體)"); 
+                    document.write("9. CUNPTS - Chinese Union Version 新標點和合本 (繁體)");
+                    let x = localStorage.getItem('mySelectLocalstorageValue');  
                 } else if (localStorage.getItem('mySelectLocalstorageValue') === "RCUVTS") { 
-                    document.write("10. RCUVTS - Chinese Union Version 和合本修定版 (繁體)"); 
+                    document.write("10. RCUVTS - Chinese Union Version 和合本修定版 (繁體)");
+                    let x = localStorage.getItem('mySelectLocalstorageValue');  
                 }
             }
 </script>
@@ -112,7 +122,7 @@ $(document).ready(function(){
 <script src="https://bibleportal.com/assets/scripts/bp-scripture-tagger-min.js" type="text/javascript"></script></footer>
 <script type="text/javascript">
 
-let x = localStorage.getItem('mySelectLocalstorageValue');  
+let x = localStorage.getItem('mySelectLocalstorageValue'); 
 alert("2 Alert = " + x); 
 // Default translation if the bible version cannot be detected
 BP.ScriptureTagger.Config.Translation = x;
