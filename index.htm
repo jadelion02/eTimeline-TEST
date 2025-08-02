@@ -1,13 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>eTimeline 時間線</title>
+<title>Menu 選項頁</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
 <script src="js/fp.js"></script>
 <script src="js/jquery-min.js"></script>
- 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
 
 
@@ -281,10 +282,18 @@ and some left padding to change the design of the dropdown content */
   display: block;
 }
 
-
+/* Expand and Collapse */
+#special1{ display: none;}
+#button-1{
+  cursor:pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 
 </style>
+
 </head>
 
 
@@ -327,7 +336,7 @@ and some left padding to change the design of the dropdown content */
   <img src="img/img3.jpg" style="width: 100%;">
   <div class="text"><a href="Revelation.htm"><font size="3" font face="Times New Roman" color="white">啟示 REVELATION</a></div>
 </div>
-<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="prev" onclick="plusSlides(-1)">❯</a>
 <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
 
@@ -340,7 +349,7 @@ and some left padding to change the design of the dropdown content */
     <a href="img/Foreword.htm" target="_blank">&emsp;Foreword</a>
        
 <div class="dropdown">
-  <button class="dropdown-btn">&emsp;About&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;</button>
+  <button class="dropdown-btn">&emsp;About&emsp;&emsp;&emsp;&nbsp;&nbsp;</button>
   <div class="dropdown-container"> 
     		<a href="img/About Author.htm" target="_blank">&emsp;&emsp;Author</a>
     		<a href="img/About eTimeline.htm" target="_blank">&emsp;&emsp;eTimeline</a>
@@ -359,7 +368,6 @@ and some left padding to change the design of the dropdown content */
     		<a href="History.htm">&emsp;&emsp;History</a>
     		<a href="Revelation.htm">&emsp;&emsp;Revelation</a>    		
   </div>
-  
 <div class="dropdown">       
   <button class="dropdown-btn">&emsp;Genealogy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
   <div class="dropdown-container">  
@@ -375,10 +383,9 @@ and some left padding to change the design of the dropdown content */
 <div class="dropdown">
   <button class="dropdown-btn">&emsp;Overview&emsp;&emsp;</button>
   <div class="dropdown-container">
-		<a href='img/Chinese Dynasty.pdf' target="_blank">&emsp;Chinese Dynasty</a>
-		<a href='img/Adam - Joseph Timeline.pdf' target="_blank">&emsp;Adam-Joseph</a>
-		<a href='img/Genealogy.pdf' target="_blank">&emsp;Genealogy</a>
-	  	<a href='History Overview.htm' target="_blank">&emsp;History</a>	
+		<a href='img/Chinese Dynasty.pdf' target="_blank">&emsp;Chinese Dynasty.pdf</a>
+		<a href='img/Adam - Joseph Timeline.pdf' target="_blank">&emsp;Adam-Joseph.pdf</a>
+		<a href='img/Genealogy.pdf' target="_blank">&emsp;Genealogy.pdf</a>		
   </div>
 </div>
 
@@ -432,10 +439,23 @@ document.onclick = function (e) {
 </div>
 <!--Scrolling Images ends -->
 
-<!-- Menu Button -->
+<!-- Menu Dropdown Button -->
 <div id="curtain_menu">
-    <button id="btn_frontpage_menu" class="openbtn" onclick="openNav()">☰ Menu</button>
+    <span translate="no"><button id="btn_frontpage_menu" class="openbtn" onclick="openNav()"> ☰ </button></span>
 <!-- Menu Button Ends -->
+
+
+
+<!-- SELECT LANGUAGE -->
+<div id="gt-mordadam-43217984"></div>
+<button onclick="ReloadFunction()" title="還原文字 Reload English">&#x1f1ec;&#x1f1e7;</button>
+
+
+<script>
+	function ReloadFunction() {
+		location.reload();
+	}
+</script>
 
 <script>
 // Caret Rotation
@@ -494,16 +514,16 @@ function showSlides(n) {
 <script>
 function myFunction() {
   var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
+  var moreText = document.getElementById("&dArr;");
   var btnText = document.getElementById("myBtn");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "&dArr;"; 
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "&uArr;"; 
     moreText.style.display = "inline";
   }
 }
@@ -545,6 +565,9 @@ function myFunction() {
 	<center>"神造萬物，各按其時成為美好，又將永生（原文是永遠）<br>安置在世人心裡。然而　神從始至終的作為，人不能參透。"<br><em>傳道書 3:11 (和合本)</em></center>  
 <br>
 
+
+
+
 <HR WIDTH="60%">
 	
 
@@ -554,6 +577,8 @@ function myFunction() {
 
 <!-- Turn following text to black-->
 
+	<!-- SELECT LANGUAGE -->
+<!-- <div id="gt-mordadam-43217984"></div> -->
 
 <font size="+1" font face="Times New Roman" color="black">
 
@@ -561,15 +586,21 @@ function myFunction() {
 &emsp;&emsp;&nbsp;
 <span style="font-weight: bold;"><img style="width: 16px; height: 16px;" alt="" src="img/favicon.png">&nbsp; Biblical, Chinese &amp; World History Timelines 
 
-&emsp;&emsp;(<a href="indexC.htm"><font size"-1" font face="標楷體" color="black">中文</a><font size="3" color="brown">  &hearts;<font size="4" font face="Times New Roman" color="black"> )
+&emsp;&emsp;(<a href="indexC.htm"><font size"-1" font face="標楷體" color="black">中文</a><font size="3" color="brown">  &hearts;<font size="4" font face="Times New Roman" color="black"> ) 
+
+
 </span>
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-		<span>
+		<span translate="no">
 			<a class="increase">A+</a> &nbsp; | &nbsp; 
 			<a class="decrease">A-</a> &nbsp; | &nbsp; 
-			<a class="reset">&#8634;</a> 
+			<a class="reset">&#8634;</a> 		
+			
 		</span>
+
+
+
 		
 
 <br>
@@ -601,8 +632,8 @@ also relative."
 
 <font size"4em" font face="Times New Roman" color="black">
 <p class="indented">
-<span style="color: red; font-weight: bold;">e</span><span style="font-weight: bold;">Timeline</span>  (also kmown as <font size="4em" style="font-weight: bold;" color="red">e</font><span style="font-weight: bold;" color="black">Timeline of History</font>)</span>
- has three timeline periods: 1. Creation - the distance past (from the creation of the heaven and the earth to the creation of Adam and Eve), 2. History - the immediate past (from the creation of Adam and Eve to present), and 3. Revelation - the future (from present to new heaven and new earth):
+<span style="color: red; font-weight: ;">e</span><span style="font-weight: ;">Timeline</span>  (also kmown as <font size="4em" style="font-weight: ;" color="red">e</font><span style="font-weight: ;" color="black">Timeline of History</font>)</span>
+ has three timeline periods: <br><br>1. Creation - the distance past (from the creation of the heaven and the earth to the creation of Adam and Eve), 2. History - the immediate past (from the creation of Adam and Eve to present), and 3. Revelation - the future (from present to new heaven and new earth):
 
 </p>
 
@@ -613,25 +644,22 @@ also relative."
 <h2></h2>
 
 <p><p class="indented">
-
-“In the beginning, God created the heaven and the earth ….  And on the seventh day God ended His work which He had made; and He rested on the seventh day from all His work which He had made.… and God blessed the seventh day, and sanctified it: because that in it He had rested from all His work which God created and made" <em>Gen 1:1-2:3 (NIV)</em>.  The Bible does not mention how old the universe is or its age. However, based on the calcul<span id="dots">...</span><span id="more">ation of the generations from Adam to present, about 6,000 years have passed. According to the Hebrew calendar that governs the passage of time among the Jewish people, the year began in 3761 B.C. (Year One), the year when Adam was created.  
+“In the beginning, God created the heaven and the earth ….  And on the seventh day God ended His work which He had made; and He rested on the seventh day from all His work which He had made.… and God blessed the seventh day, and sanctified it: because that in it He had rested from all His work which God created and made" Gen 1:1-2:3 (NIV).  The Bible does not mention how old the universe is or its age. However, based on the calcul<span id="special1">ation of the generations from Adam to present, about 6,000 years have passed. According to the Hebrew calendar that governs the passage of time among the Jewish people, the year began in 3761 B.C. (Year One), the year when Adam was created.  
 <!-- https://www.haaretz.com/jewish/3761-bce-the-world-is-created-1.5405777 -->
 <br><br>
-Isaac ben Samuel of Acre (Hebrew: יצחק בן שמואל דמן עכו, Yitzhak ben Shmuel d'min Akko) a 13th-14th century Jewish kabbalist, whose writing was used to calculate the age of the universe. The calculation was based on the view that the universe was 42,000 years old when Adam was created at the beginning of the last 7,000 Sabbatical cycle, and by distinguishing between earthly "solar years" and "divine years," based on a verse from Psalms, which states that "For a thousand years in thy sight are but as yesterday..." <em>Psalm 90:4 (NIV)</em>.  Each day of a divine year is equal to a thousand earthly "solar years," then a divine year would be 365,250 years long. Isaac then makes some other calculations based on the Talmud and the Biblical sabbatical year, and arrived at 15,340,500,000 years as the age of the universe.
+
+<class="indented">
+Isaac ben Samuel of Acre (Hebrew: יצחק בן שמואל דמן עכו, Yitzhak ben Shmuel d'min Akko) a 13th-14th century Jewish kabbalist, whose writing was used to calculate the age of the universe. The calculation was based on the view that the universe was 42,000 years old when Adam was created at the beginning of the last 7,000 Sabbatical cycle, and by distinguishing between earthly "solar years" and "divine years," based on a verse from Psalms, which states that "For a thousand years in thy sight are but as yesterday..." Book of Psalm 90:4 (&Nu;&Iota;V).  Each day of a divine year is equal to a thousand earthly "solar years," then a divine year would be 365,250 years long. Isaac then makes some other calculations based on the Talmud and the Biblical sabbatical year, and arrived at 15,340,500,000 years as the age of the universe.
 <!-- https://www.quantumtorah.com/on-the-nature-of-time-and-the-age-of-the-universe/ -->
-<br><br>
+
+<br><br><class="indented">
 Measurements made by NASA's Wilkinson Microwave Anisotropy Probe (WMAP) spacecraft have shown that the universe is about 13.7 billion years old. The measurements are conducted by making detailed observations of the fluctuations in the cosmic microwave background (CMB) and using that information in Einstein's Theory of General Relativity to 'rewind the clock backwards to time equal zero' (i.e. "Big Bang"), or when the universe had "zero" size (i.e. Singularity).
-<br><br>
+<br><br><class="indented">
 In Dr. Alexander Poltorak's paper "On the Nature of Time and the Age of the Universe" presented at the International Torah and Science Conference on December 18, 2005, and two articles: "On the Age of the Universe in the Many-Worlds Interpretation of Quantum Mechanics", and "Towards Reconciliation of Biblical and Cosmological Ages of the Universe", he demonstrated that the apparent contradiction between the biblical age of the universe and the cosmological age of the universe can be reconciled based on quantum mechanics in its various interpretations.
-<br><br>
+<br><br><class="indented">
 According to Dr. Gerald Schroeder in his books (Genesis and the Big Bang, and The Science of God), and articles (Six days and 14 billion years: measuring reality from two perspectives - Jerusalem Post-September 30, 2018, and Age of the Universe), the 6-day creation and 14 billion years of the age of the universe are the same depending on how reality is viewed from two different perspectives. 
-<br><br>
-
-
+<br><br><class="indented">
 <!-- xxxxx NEW SECTION BELOW xxxxx -->
-
-
-
 Before we go any further into the different perspectives of the age of the universe, let’s refresh our understanding and knowledge of cosmology. 
 <br><br>
 In 1929, astronomer Edwin Hubble (1889-1953) discovered that distance galaxies were moving away from the earth due to the observed light's wavelength was stretched towards the red spectrum (i.e. redshift). The discovery led to the conclusion that, at some point in time, the universe must have started with a small beginning, and consequently gave rise to the support of the “Big Bang” theory of the universe first proposed by Georges Lemaître in 1927. Subsequent observations of the CMB, the residual heat of creation - faint afterglow of light with nearly uniform intensity that fills the universe, and measurements by the WMAP in 2001 placed a date of the “Big Bang” to approximately 13.77 billion years ago.
@@ -646,52 +674,59 @@ Shortly after the "Big Bang" the universe was much smaller than it is today by a
 <br><br>
 The equation used by Dr. Schroeder to view the two different perspectives is (based on the universe being 15 billion years old):
 <br><br>
-<font size"4em"> <I>A</I></font>
+<class="indented">
+<font size"4em"> <I>&#913;</I></font>
+<class="indented">
 <font size"2em"> &nbsp;&nbsp;&nbsp; = &nbsp;</font>
-<font size"4em"> <I>A<sub>0</sub></I> <I>e </I> <SUP>-Lt</SUP></font>
+<class="indented">
+<font size"4em"> <I>&#913;<sub>0</sub></I> <I>e </I> <SUP>-Lt</SUP></font>
 <br>
+
 
 <font size"4em" font face="Times New Roman" color="black">
 where:
 <br>
-<I>A</I>&emsp;&ensp;- Earth time in day (24-hour).
-<br>
-<I>A<sub>0</sub></I>&emsp;- The ratio of CMB radiation frequency or threshold energy temperature of protons (10.9 x 10<font size"3em"><SUP>12 o</SUP><font size"4em">K) to current value (2.73 <font size"3em"><SUP>o</SUP><font size"4em">K).
-<br>
-<I>e</I>&emsp;  - Natural log = 2.718.
-<br>
-L &emsp;- Natural log of 2 = 0.693.
-<br>
-t &emsp; - Genesis days from 0 to 6 divided by half period.
+<I>&#913;</I> = Earth time in day (24-hour).
+<br><class="indented">
+<I>&#913;<sub>0</sub></I> = The ratio of CMB radiation frequency or threshold energy temperature of protons (10.9 x 10<font size"3em"><SUP>12 o</SUP><font size"4em">K) to current value (2.73 <font size"3em"><SUP>o</SUP><font size"4em">K).
+<br><class="indented">
+<I>e</I> = Natural log = 2.718.
+<br><class="indented">
+L = Natural log of 2 = 0.693.
+<br><class="indented">
+t = Genesis days from 0 to 6 divided by half period.
 <br>
 <br>
 To view the perspectives from Earth (i.e. the area under the curve), apply integration to the equation:
 <br><br>
-<font size"4em"><I>∫ A</I></font>
+<font size"4em"><I>∫ &#913;</I></font>
 <font size"2em"> &nbsp; = &nbsp;
-<font size"4em"> (<I>-A<sub>0 </sub></I>/ L) <I>e </I> <SUP>-Lt</SUP></font>
+<font size"4em"> (<I>-&#913;<sub>0 </sub></I>/ L) <I>e </I> <SUP>-Lt</SUP></font>
 <br><br>
 
 <font size"4em" font face="Times New Roman" color="black">
 Instead of using the equation above, another similar equation could be used, and this is the Radioactive Decay equation or the Radioactive Half-life equation:
 <br><br>
 
-<font size"4em"> <I>N</I></font>
+<class="indented">
+<font size"4em"> <I>&Nu;</I></font>
+
 <font size"2em"> &nbsp;&nbsp;&nbsp; = &nbsp;
-<font size"4em"> <I>N<sub>0</sub></I> <I>e </I> <SUP>-λt</SUP></font>
-<br>
+<class="indented">
+<font size"4em"> <I>&Nu;<sub>0</sub></I> <I>e </I> <SUP>-λt</SUP></font>
+<br><class="indented">
 <font size"4em" font face="Times New Roman" color="black">
 where:
 <br>
-<I>N</I>&emsp;&ensp;- Final condition.
-<br>
-<I>N<sub>0</sub></I>&emsp; - Initial condition.
-<br>
-<I>e</I>&emsp;&ensp; - Natural log = 2.718.
-<br>
-λ &emsp;&ensp;- Decay constant = 0.693.
-<br>
-t &emsp;&ensp; - Day's Half-life = Half Day.
+<I>&Nu;</I> = Final condition.
+<br><class="indented">
+<I>&Nu;<sub>0</sub></I> = Initial condition.
+<br><class="indented">
+<I>e</I> = Natural log = 2.718.
+<br><class="indented">
+λ = Decay constant = 0.693.
+<br><class="indented">
+t = Day's Half-life = Half Day.
 <br><br>
 Solving the equation provides us with the two different perspectives: From the perspective of the Earth looking backward in time, or from the perspective shortly after the universe was created looking forward. 
 <br><br>
@@ -699,7 +734,7 @@ For example: As the universe expands, time also expands (stretches). Looking for
 
 However, from the perspective of the Earth looking backward, Day 1 started at the moment of the "Big Bang" (about 13,770,000,000 B.C.), and it took a little over 7&pm; billion years to reach the next day. Day 2 started in 6,770,000,000 B.C., and Day 6 started in 210 million B.C., etc. This cosmic clock stopped ticking when Adam was created, and the Earth clock started ticking in about 6,000 years ago (about 3761 B.C.). For simplicity sake, only one set of calculation based on 13.77 billion years of age was performed.
 <br><br>
-
+<class="indented">
  <font size"4em" font face="Times New Roman" color="black">
 The graph below provides another view of the two different perspectives. The blue line is based on the universe being 13.77 billion years old, whereas the red line is based on 15 billion years old. 
 <br><br>
@@ -710,11 +745,24 @@ The graph below provides another view of the two different perspectives. The blu
 	<!-- &emsp;&emsp;<a href="img/Table Calc.png" alt="text" title="See actual calculated years" target="new"><img src="img/Table.png" alt="Calc" style="width-max: 480px; height: auto"></a> -->
 	<!-- &emsp;&emsp;&emsp;&emsp;&emsp;<img src="img/6-Day Creation.png" style="max-width: 480px; height: auto"> -->
 
+
+
+<class="indented">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+ <font size"4em" font face="Times New Roman" color="Blue">Blue: 13.7 Billion Years </font><span translate="no">&emsp; </span> <font size"4em" font face="Times New Roman" color="Red">Red: 15 Billion Years</font>
+<br>
+
 	&emsp;<a href="img/Table Calc.png" alt="text" title="See actual calculated years" target="new">
 	<img src="img/Table.png" width="380" height=auto></a>
 	&emsp;&emsp;&emsp;&emsp;&emsp;<img src="img/6-Day Creation.png" width="480" height=auto>
 <br>
 
+<class="indented">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Cosmic year (Backward Looking) vs  Genesis 6-Day year (Forward Looking)<br><br>
+
+
+<class="indented">
 <font size"2em" font face="Times New Roman" color="black">
 	&emsp;&emsp;&emsp;Day - Genesis 6-Day (Calculation is based on 13.77 billion years) 
 
@@ -737,15 +785,15 @@ Red
 
 
 
-
+<class="indented">
 <font size"4em" font face="Times New Roman" color="black">
 In spite of the 1.23 billion years of deviation of input values, the two lines (Blue and Red lines) appear to follow the same downward trajectory from Day 1 to Day 6 of the Genesis 6-Day timeline. 
 <br><br>
-
+<class="indented">
 <font size"3em" font face="Times New Roman" color="black">
  &middot; For a thousand years in thy sight are but as yesterday when it is past, and as a watch in the night. <I>(Psalm 90:4)</I><br>
  &middot; But, beloved, be not ignorant of this one thing, that one day is with the Lord as a thousand years, and a thousand years as one day. <I>(2 Peter 3:8)</I>
-
+<class="indented">
 
 
 <br><br>
@@ -782,13 +830,15 @@ The Book of Revelation is the final book of the Bible, an example of apocalyptic
 According to the text, it was written around 95 A.D. on the island Patmos, an island off the coast of Turkey. Revelation is not just about the future. It is also about the past and very much about the present - perhaps primarily about the present. For it was written to be read and heard in the present age; it provides an essential component for the church’s understanding of life in this world of the coming of Christ.
 <br><br>
 
+<!-- Ask Google Translate NOT to translate the down arrow sign for "read more" paragraph expansion -->
+</span><span translate="no" id="button-1"> ...[&dArr;] </span></p>
+
+</p>
 
 
-</span></p>
-<p class="indented"><button onclick="myFunction()" id="myBtn">Read more</button>
-<br>
 
 <HR WIDTH="60%">
+
 
 <br>
 <font size="4" font face="Times New Roman" color="brown">
@@ -809,7 +859,35 @@ According to the text, it was written around 95 A.D. on the island Patmos, an is
 
 <font face="Times New Roman" color="black">
 
-</p>
+            </p>
+        </div>
+        <!-- /Container -->
+        
+        
+
+        <!-- Js | Setting -->
+        <script type="text/javascript">
+            window.gtranslateSettings = window.gtranslateSettings || {};
+            window.gtranslateSettings["43217984"] = {
+                default_language: "en", 					// Set Default Language
+                languages: [
+                    "af","sq","am","en","fa","ar","ps","ja","zh-CN","hy","az","eu","be","bn","bs","bg","ca","ceb","ny","zh-TW",
+                    "co","hr","cs","da","nl","eo","et","tl","fi","fr","fy","gl","ka","de","el","gu","ht","ha","haw","iw","hi",
+                    "hmn","hu","is","ig","id","ga","it","jw","kn","kk","km","ko","ku","ky","lo","la","lv","lt","lb","mk","mg",
+                    "ms","ml","mt","mi","mr","mn","my","ne","no","pl","pt","pa","ro","ru","sm","gd","sr","st","sn","sd","si",
+                    "sk","sl","so","es","su","sw","sv","tg","ta","te","th","tr","uk","ur","uz","vi","cy","xh","yi","yo","zu",
+                ], // Languages Selected
+                
+                wrapper_selector: "#gt-mordadam-43217984", 	// Element Selected
+                native_language_names: 1, 					// Set All Languages ​​Should Be Native Language From The Beginning
+                flag_style: "2d", 							// Flag Style
+                flag_size: 24, 								// Flag Size
+                horizontal_position: "inline", 				// Set Horizontal Position
+                flags_location: "flags\/", 					// Set Flags Location
+            };
+        </script>
+        
+        <script src="js/gt.min.js" data-gt-widget-id="43217984"></script>
 
 <br>
 <!-- Time is created by things, it wasn't there waiting for things to act within it. -->
@@ -852,7 +930,21 @@ $(document).ready(function() {
 });
 </script>
 
+<script>
 
+$(document).ready(function(){
+  $("#button-1").click(function(){
+      $("#special1").toggle()
+      var isVisible = $( "#special1" ).is( ":visible" );
+      if(isVisible){
+        $("#button-1").html(" [&uArr;] ");
+      }else{
+        $("#button-1").html(" ...[&dArr;] ");
+      }
+    
+  })
+})
+</script>
 
 
 
@@ -869,6 +961,7 @@ $(document).ready(function() {
   &nbsp;<font size="1" color="grey">© 2018, R. Siew - [9600]</font>
 <!--  &nbsp;<font size"2em" color="black">年份只是大約 Years are only approximate.[9510]</font> -->
 </footer>
+
 
 </body>
 </html>
